@@ -36,7 +36,7 @@ public class BaiduAi {
 //        String url = "https://aip.baidubce.com/rest/2.0/image-classify/v2/advanced_general"; //通用物体和场景识别高级版
 //        String url = "https://aip.baidubce.com/rest/2.0/image-classify/v1/object_detect"; //图像主体检测(长宽高)
 //        String url = "https://aip.baidubce.com/rest/2.0/image-classify/v2/logo"; //图像主体检测(长宽高)
-		  url = "https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic"; //文字识别
+		  url = "https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic"; //普通 文字识别
 //        String url = "https://aip.baidubce.com/rest/2.0/ocr/v1/accurate_basic"; //文字识别(高精度版)
 //        String url = "https://aip.baidubce.com/rest/2.0/ocr/v1/general"; //文字识别(高精度版)
         
@@ -132,7 +132,7 @@ public class BaiduAi {
 			JSONObject row = jsonArray.getJSONObject(i);
 //			System.out.println("row："+row);
 			String words = row.getString("words");
-			System.out.println("图片上的文字："+words);
+//			System.out.println("图片上的文字："+words);
 			for(int j=0;j<length;j++){
 				if(words.contains(String.valueOf(check.charAt(j)))){
 					return true;
